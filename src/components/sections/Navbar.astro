@@ -2,14 +2,14 @@
 import Downloads from "@megaMenu/Downloads.astro";
 import Support from "@megaMenu/Support.astro";
 import Platform from "@megaMenu/Platform.astro";
-import Features from "@megaMenu/Features.astro";
 import Button from "@ui/Button.astro";
 import { navigationLinks } from "@utils/navigation";
+import Services from "../common/MegaMenu/Services.astro";
 
 const currentPath = Astro.url.pathname;
 
 // Call-to-action configuration for the primary button
-const primaryCTA = { text: "Try Free", href: "https://github.com/mearashadowfax/DataNova" };
+const primaryCTA = { text: "Let's Connect!", href: "/contact" };
 ---
 
 <header
@@ -24,7 +24,7 @@ const primaryCTA = { text: "Try Free", href: "https://github.com/mearashadowfax/
         href="/"
         aria-label="DataNova Logo"
         translate="no"
-        ><span class="font-semibold text-teal-700">Data</span>Nova</a
+        ><span class="font-semibold text-teal-700">Pandos</span>Realty</a
       >
 
       <button
@@ -95,13 +95,13 @@ const primaryCTA = { text: "Try Free", href: "https://github.com/mearashadowfax/
                 Home
               </a>
 
-              <Features />
+              
 
-              <Platform />
+              <!-- <Platform /> -->
 
-              <Downloads />
+              <!-- <Downloads /> -->
 
-              <Support />
+              <!-- <Support /> -->
 
               {
                 navigationLinks.map((link) => (
@@ -120,6 +120,7 @@ const primaryCTA = { text: "Try Free", href: "https://github.com/mearashadowfax/
                   </a>
                 ))
               }
+              <Services />
             </div>
           </div>
 
@@ -129,7 +130,6 @@ const primaryCTA = { text: "Try Free", href: "https://github.com/mearashadowfax/
             <Button
               href={primaryCTA.href}
               variant="primary"
-              target="_blank"
               className="inline-flex text-nowrap border-none py-2!"
               >{primaryCTA.text}</Button
             >
